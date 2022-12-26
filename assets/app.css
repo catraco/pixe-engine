@@ -5,3 +5,63 @@
 -------------------
 
 */
+
+:root {
+	--light: #d0d0d0;
+	--dark: #101015;
+	--blue: #5050d0;
+	--red: #d05050;
+	--yellow: #d0d050;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+html {
+	background-color: var(--dark);
+}
+
+.loading-page {
+	background-color: var(--dark);
+	display: grid;
+	position: fixed;
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+}
+
+.loading-page .icon {
+	background-color: var(--yellow);
+	place-self: center;
+	padding: 0 0.5em;
+	font-size: 2em;
+	font-weight: 800;
+	animation: icon-animation 2s;
+}
+
+@keyframes icon-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+main {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+}
+
+main .container {
+	background-color: var(--light);
+	place-self: center;
+	width: 90%;
+	height: 90%;
+}
